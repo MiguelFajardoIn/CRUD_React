@@ -1,10 +1,15 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import Table from '../componentes/tabla'
 import Form from '../componentes/form'
+import { useState } from 'react'
 
 export default function Home() {
+  const[visible,setVisible] = useState(false)
+
+  const handler = () => {
+    setVisible(!visible)
+  }
+
   return (
     <div >
       <Head>
@@ -20,12 +25,12 @@ export default function Home() {
         <div className='container-fluid row mt-5' id='cuerpo'>
           <div className='row'>
             <div className='col-3 pt-3 text-center'>
-              <button className="btn btn-primary " type="submit">Agregar usuario</button>
+              <button onClick={handler} className="btn btn-primary " type="submit">Agregar usuario</button>
             </div>
             <div className='col-6'>
-              <didv>
-                <Form />
-              </didv>
+              
+                {visible? <Form></Form>: <></>}
+              
               <div>
                 <Table />
               </div>

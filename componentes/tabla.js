@@ -1,6 +1,8 @@
+import data from '../database/data.json'
+
 
 export default function Table() {
-    return(
+    return (
         <table className="table">
             <thead>
                 <tr>
@@ -11,14 +13,25 @@ export default function Table() {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td> Nombre </td>
-                    <td> Nombre </td>
-                    <td> Nombre </td>
-                    <td> 5 </td>
-                </tr>
+                {
+                   data.map((obj,i)=><Tr{...obj}key={i}/>) 
+                }
+
             </tbody>
 
         </table>
+    )
+}
+
+function Tr({nombre,apellido,edad,telefono}) {
+
+    return (
+        <tr>
+            <td> {nombre || "Unknown"} </td>
+            <td> {apellido || "Unknown"} </td>
+            <td> {edad || "Unknown"} </td>
+            <td> {telefono || "Unknown"} </td>
+        </tr>
+
     )
 }

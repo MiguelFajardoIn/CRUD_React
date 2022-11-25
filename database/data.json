@@ -1,0 +1,24 @@
+[
+    {
+        "id":1,
+        "nombre":"Miguel",
+        "apellido": "Fajardo",
+        "edad":22,
+        "telefono": "934266061"
+    },
+    {
+        "id":2,
+        "nombre":"Luis",
+        "apellido": "Gonzales",
+        "edad":25,
+        "telefono": "934261261"
+    },
+    {
+        "id":3,
+        "nombre":"Gonzalo",
+        "apellido": "Redolfo",
+        "edad":26,
+        "telefono": "935566061"
+    }
+
+]
